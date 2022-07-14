@@ -32,7 +32,7 @@ Script Data End */
 #include "AreaTriggerAI.h"
 #include "InstanceScript.h"
 #include "SpellAuras.h"
-//#include "zone_the_maw"
+//#include "zone_the_maw.cpp"
 //#include "zone_Sanctum_of_Domination.cpp"
 
 enum NPC_Phases
