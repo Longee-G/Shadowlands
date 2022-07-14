@@ -33,7 +33,7 @@ Script Data End */
 #include "InstanceScript.h"
 #include "SpellAuras.h"
 //#include "zone_the_maw"
-//#include "zone_Sanctum_of_Domination"
+//#include "zone_Sanctum_of_Domination.cpp"
 
 enum NPC_Phases
 {
