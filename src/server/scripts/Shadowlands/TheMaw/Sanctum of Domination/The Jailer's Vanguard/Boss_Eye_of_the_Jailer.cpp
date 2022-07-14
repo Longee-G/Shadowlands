@@ -34,3 +34,47 @@ Script Data End */
 #include "SpellAuras.h"
 //#include "zone_the_maw"
 //#include "zone_Sanctum_of_Domination"
+
+enum NPC_Phases
+{
+    NPC_Phase_1,
+    NPC_Phase_2,
+    NPC_Phase_3,
+};    
+
+enum NPC_list
+{
+    NPC_Boss_Eye_of_the_Jailer = 180018,
+    NPC_Deathseeker_Eye = 179942, // N mode
+    NPC_Stygian_Abductor = 176521, // hc mode
+    
+};
+
+enum NPC_spells
+{
+    Fractured_Soul = 350034,
+    Annihilating_Glare = 350763,
+    Desolation_Beam = 350847.
+    Spreading_Misery = 350816,
+    Jailers_Misery = 350808,
+    Deathlink = 350828,
+    Suffering = 351826,
+    Slothful_Corruption = 350713,
+    Titanic_Death_Gaze = 349028,
+    Immediate_Extermination = 348969,
+    Piercing_Lens = 350803,
+    Dragging_Chains = 349979. //hc
+    Assailing_Lance = 348074, //hc
+};
+
+enum NPC_loot
+{
+    Artifice_of_the_Archmage = 181738,
+};
+
+enum soumds
+{
+    MON_Crucible_Soulseeker_Attack_01_174592 = 176548.
+};        
+        
+    
