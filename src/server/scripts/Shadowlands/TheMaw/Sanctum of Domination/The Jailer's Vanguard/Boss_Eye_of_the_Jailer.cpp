@@ -16,7 +16,7 @@
 */
 
 /* Script Data Start
-SDName: 
+SDName: Boss_Eye_of_the_jailer
 SDAuthor: Frozen
 SD%Complete: %
 SDComment: still working on structure.
@@ -35,11 +35,11 @@ Script Data End */
 //#include "zone_the_maw.cpp"
 //#include "zone_Sanctum_of_Domination.cpp"
 
-enum NPC_Phases
+enum Phases
 {
-    NPC_Phase_1,
-    NPC_Phase_2,
-    NPC_Phase_3,
+    Phase_1,
+    Phase_2,
+    Phase_3,
 };    
 
 enum NPC_list
@@ -50,7 +50,7 @@ enum NPC_list
     
 };
 
-enum NPC_spells
+enum Spells
 {
     Fractured_Soul = 350034,
     Annihilating_Glare = 350763,
@@ -75,23 +75,148 @@ enum NPC_loot
 enum sounds
 {
     MON_Crucible_Soulseeker_Attack_01_174592 = 176548.
-};        
+};
+
+struct NPC_Boss_Eye_of_the_Jailer : public InstanceScript
+{
+    sanctum_of_domination(InstanceMap* map) : InstanceScript(map) { }
+}; 
+
+class NPC_Boss_Eye_of_the_Jailer : public PlayerScript
+{
+public:
+    NPC_Boss_Eye_of_the_Jailer() : PlayerScript("NPC_Boss_Eye_of_the_Jailer") { }
+
+    void OnLogin(Player* player,bool /*fristlogin*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == AREA_SANCTUM_OF_DOMINATION)
+            player->GoMapId()  == GetMapId;
+    }
+        
+        void OnUpdateArea(Player* player, uint32 /*newArea*/, uint32 /*oldArea*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == MAP_NPE)
+            player->GoMapId()  == GetMapId;
+    }
+};
+
+class NPC_Boss_Eye_of_the_Jailer : public ZoneScript
+{
+public:
+    NPC_Boss_Eye_of_the_Jailer() : ZoneScript("NPC_Boss_Eye_of_the_Jailer") { }
+
+    void OnPlayerExit(Player* player) override
+    {
+        // Remove sanctuary flag when leaving sanctum of domination
+        player->GoOutside(NPC_Boss_Eye_of_the_Jailer);
+    }
+};
+    
+struct NPC_Deathseeker_Eye : public InstanceScript
+{
+    sanctum_of_domination(InstanceMap* map) : InstanceScript(map) { }
+}; 
+
+class NPC_Deathseeker_Eye : public PlayerScript
+{
+public:
+    NPC_Deathseeker_Eye() : PlayerScript("NPC_Deathseeker_Eye") { }
+
+    void OnLogin(Player* player,bool /*fristlogin*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == AREA_SANCTUM_OF_DOMINATION)
+            player->GoMapId()  == GetMapId;
+    }
+        
+        void OnUpdateArea(Player* player, uint32 /*newArea*/, uint32 /*oldArea*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == MAP_NPE)
+            player->GoMapId()  == GetMapId;
+    }
+};
+
+class NPC_Deathseeker_Eye : public ZoneScript
+{
+public:
+    NPC_Deathseeker_Eye() : ZoneScript("NPC_Deathseeker_Eye") { }
+
+    void OnPlayerExit(Player* player) override
+    {
+        // Remove sanctuary flag when leaving sanctum of domination
+        player->GoOutside(NPC_Deathseeker_Eye);
+    }
+};
+
+class NPC_Stygian_Abductor : public ZoneScript
+{
+public:
+    NPC_Stygian_Abductor() : ZoneScript("NPC_Stygian_Abductor") { }
+
+    void OnPlayerExit(Player* player) override
+    {
+        // Remove sanctuary flag when leaving sanctum of domination
+        player->GoOutside(NPC_Stygian_Abductor);
+    }
+};
+    
+struct NPC_Stygian_Abductor : public InstanceScript
+{
+    sanctum_of_domination(InstanceMap* map) : InstanceScript(map) { }
+}; 
+
+class NPC_Stygian_Abductor : public PlayerScript
+{
+public:
+    NPC_Stygian_Abductor() : PlayerScript("NPC_Stygian_Abductor") { }
+
+    void OnLogin(Player* player,bool /*fristlogin*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == AREA_SANCTUM_OF_DOMINATION)
+            player->GoMapId()  == GetMapId;
+    }
+        
+        void OnUpdateArea(Player* player, uint32 /*newArea*/, uint32 /*oldArea*/) override
+    {
+        // Set zone as Raid
+        if (player->GetMapId() == MAP_NPE)
+            player->GoMapId()  == GetMapId;
+    }
+};
+
+class NPC_Stygian_Abductor : public ZoneScript
+{
+public:
+    NPC_Stygian_Abductor() : ZoneScript("NPC_Stygian_Abductor") { }
+
+    void OnPlayerExit(Player* player) override
+    {
+        // Remove sanctuary flag when leaving sanctum of domination
+        player->GoOutside(NPC_Stygian_Abductor);
+    }
+};       
  
-Struct NPC_Boss_Eye_of_the_Jailer : public BossAI
+struct NPC_Boss_Eye_of_the_Jailer : public BossAI
 {
-   NPC_Boss_Eye_of_the_Jailer(Creature* creature) : BossAI(creature, DATA_NPC_Boss_Eye_of_the_Jailer) { }
+   NPC_Boss_Eye_of_the_Jailer(Creature* creature) BossAI(creature, DATA_NPC_Boss_Eye_of_the_Jailer) { }
 };
 
-Struct NPC_Deathseeker_Eye : public BossAI
+struct NPC_Deathseeker_Eye : public BossAI
 {
-   NPC_Deathseeker_Eye(Creature* creature) : BossAI(creature, DATA_NPC_Deathseeker_Eye) { }
+   NPC_Deathseeker_Eye(Creature* creature) BossAI(creature, DATA_NPC_Deathseeker_Eye) { }
 };
 
-Struct NPC_Stygian_Abductor : public BossAI
+struct NPC_Stygian_Abductor : public BossAI
 {
-   NPC_Stygian_Abductor(Creature* creature) : BossAI(creature, DATA_NPC_Stygian_Abductor) { }
+   NPC_Stygian_Abductor(Creature* creature) BossAI(creature, DATA_NPC_Stygian_Abductor) { }
 };
 
-void AddSC_NPC_Boss_Eye_of_the_Jailer(),
-void AddSC_NPC_Deathseeker_Eye(),
-void AddSC_NPC_Stygian_Abductor(),
+{
+void AddSC_NPC_Boss_Eye_of_the_Jailer(),
+void AddSC_NPC_Deathseeker_Eye(),
+void AddSC_NPC_Stygian_Abductor(),
+};
