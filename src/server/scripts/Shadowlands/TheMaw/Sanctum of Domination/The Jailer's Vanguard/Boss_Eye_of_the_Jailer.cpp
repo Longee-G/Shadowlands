@@ -76,5 +76,22 @@ enum sounds
 {
     MON_Crucible_Soulseeker_Attack_01_174592 = 176548.
 };        
-        
-    
+ 
+Struct NPC_Boss_Eye_of_the_Jailer : public BossAI
+{
+   NPC_Boss_Eye_of_the_Jailer(Creature* creature) : BossAI(creature, DATA_NPC_Boss_Eye_of_the_Jailer) { }
+};
+
+Struct NPC_Deathseeker_Eye : public BossAI
+{
+   NPC_Deathseeker_Eye(Creature* creature) : BossAI(creature, DATA_NPC_Deathseeker_Eye) { }
+};
+
+Struct NPC_Stygian_Abductor : public BossAI
+{
+   NPC_Stygian_Abductor(Creature* creature) : BossAI(creature, DATA_NPC_Stygian_Abductor) { }
+};
+
+void AddSC_NPC_Boss_Eye_of_the_Jailer();
+void AddSC_NPC_Deathseeker_Eye();
+void AddSC_NPC_Stygian_Abductor();
