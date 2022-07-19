@@ -92,6 +92,6 @@ Struct NPC_Stygian_Abductor : public BossAI
    NPC_Stygian_Abductor(Creature* creature) : BossAI(creature, DATA_NPC_Stygian_Abductor) { }
 };
 
-void AddSC_NPC_Boss_Eye_of_the_Jailer();
-void AddSC_NPC_Deathseeker_Eye();
-void AddSC_NPC_Stygian_Abductor();
+void AddSC_NPC_Boss_Eye_of_the_Jailer(),
+void AddSC_NPC_Deathseeker_Eye(),
+void AddSC_NPC_Stygian_Abductor(),
