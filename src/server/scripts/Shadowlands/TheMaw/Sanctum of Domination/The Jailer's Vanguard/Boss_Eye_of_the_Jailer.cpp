@@ -72,7 +72,7 @@ enum NPC_loot
     Artifice_of_the_Archmage = 181738,
 };
 
-enum soumds
+enum sounds
 {
     MON_Crucible_Soulseeker_Attack_01_174592 = 176548.
 };        
