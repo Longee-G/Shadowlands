@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2019 AshamaneProject <https://github.com/AshamaneProject>
+ * Copyright (C) 2022 BfaCore Reforged
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,17 +15,39 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-void AddSC_stormwind_extraction();
-void AddSC_scenario_stormwind_extraction();
-//void AddSC_scenario_the_battle_for_lordaeron();
-//void AddSC_scenario_scenario_the_defense_of_karabor();
-//Void AddSC_scenario_verdant_wilds();
+#include "Scenario.h"
+#include "GameObject.h"
+#include "ScriptMgr.h"
+#include "Spell.h"
+#include "WorldStatePackets.h"
+#include "ScriptedGossip.h"
+#include "ScriptedCreature.h"
 
-void AddScenariosScripts()
+struct scenario_the_defense_of_karabor : public InstanceScript
 {
-    AddSC_stormwind_extraction();
-    AddSC_scenario_stormwind_extraction();
-    //AddSC_scenario_the_battle_for_lordaeron();
-    //AddSC_scenario_scenario_the_defense_of_karabor();
-    //AddSC_scenario_verdant_wilds();
+    scenario_the_defense_of_karabor(InstanceMap* map) : InstanceScript(map) { }
+
+    void Initialize() override
+    {
+
+    }
+
+    void OnPlayerEnter(Player* player) override
+    {
+
+    }
+
+    void Update(uint32 diff) override
+    {
+
+    }
+
+private:
+
+};
+
+
+void AddSC_scenario_the_defense_of_karabor()
+{
+
 }

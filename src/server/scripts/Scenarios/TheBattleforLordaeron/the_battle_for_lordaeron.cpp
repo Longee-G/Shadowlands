@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2019 AshamaneProject <https://github.com/AshamaneProject>
+ * Copyright (C) 2022 BfaCore Reforged
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,17 +15,16 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-void AddSC_stormwind_extraction();
-void AddSC_scenario_stormwind_extraction();
-//void AddSC_scenario_the_battle_for_lordaeron();
-//void AddSC_scenario_scenario_the_defense_of_karabor();
-//Void AddSC_scenario_verdant_wilds();
-
-void AddScenariosScripts()
+#include "ScriptMgr.h"
+#include "CombatAI.h"
+#include "Creature.h"
+#include "CreatureGroups.h"
+#include "GameObject.h"
+#include "InstanceScript.h"
+#include "Scenario.h"
+#include "the_battle_for_lordaeron.h"
+	
+void AddSC_the_battle_for_lordaeron()
 {
-    AddSC_stormwind_extraction();
-    AddSC_scenario_stormwind_extraction();
-    //AddSC_scenario_the_battle_for_lordaeron();
-    //AddSC_scenario_scenario_the_defense_of_karabor();
-    //AddSC_scenario_verdant_wilds();
+
 }
